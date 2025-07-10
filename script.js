@@ -102,4 +102,18 @@ document.addEventListener('DOMContentLoaded', () => {
     animatedItems.forEach(item => {
         animationObserver.observe(item);
     });
+
+    const certificateCard = document.querySelector('.certificate-card');
+    if (certificateCard) {
+        certificateCard.addEventListener('click', (e) => {
+            e.preventDefault();
+            certificateCard.classList.toggle('show-viewer');
+        });
+
+        document.addEventListener('scroll', () => {
+            if (certificateCard.classList.contains('show-viewer')) {
+                certificateCard.classList.remove('show-viewer');
+            }
+        });
+    }
 });

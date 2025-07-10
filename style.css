@@ -229,6 +229,32 @@ h2 {
 
 #skills .skill-category ul.icon-list li:hover { color: #ff8c00; }
 
+[data-tooltip] {
+    position: relative;
+}
+
+[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+[data-tooltip]:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
 .soft-skills h3 {
     color: #ff69b4;
 }
@@ -253,6 +279,30 @@ h2 {
 .project-card:hover, .certificate-card:hover {
     transform: translateY(-10px) scale(1.05);
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.certificate-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.certificate-viewer {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: top 0.5s ease;
+}
+
+.certificate-card.show-viewer .certificate-viewer {
+    top: 0;
+}
+
+.certificate-viewer iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 .project-icon, .certificate-icon {
