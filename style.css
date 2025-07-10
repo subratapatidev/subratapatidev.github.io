@@ -24,29 +24,12 @@ body {
     color: #fff;
     line-height: 1.6;
     overflow-x: hidden;
-    cursor: none;
+    cursor: default;
     transition: background-color 1s ease; /* The magic! Smoothly animates the background color */
 }
 
-.custom-cursor {
-    position: fixed;
-    width: 40px; /* Adjust size as needed */
-    height: 40px; /* Adjust size as needed */
-    background-image: url('sword.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    pointer-events: none;
-    transform: translate(-10%, -10%) rotate(-45deg); /* Initial left tilt */
-    transition: transform 0.2s ease;
-    z-index: 9999;
-}
-
-.custom-cursor.clicked {
-    transform: translate(-10%, -10%) rotate(45deg) scale(1.2); /* Right tilt and slightly larger */
-}
-
 a, .btn {
-    cursor: none;
+    cursor: pointer;
 }
 
 header {

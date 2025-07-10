@@ -1,23 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const customCursor = document.querySelector('.custom-cursor');
     const navLinks = document.querySelectorAll('nav ul li a');
     const sections = document.querySelectorAll('section');
     const animatedItems = document.querySelectorAll('.animated-item');
     const logoSpan = document.querySelector('.logo span');
 
-    // Custom Cursor
-    document.addEventListener('mousemove', e => {
-        customCursor.style.left = e.clientX + 'px';
-        customCursor.style.top = e.clientY + 'px';
-    });
-
-    document.addEventListener('mousedown', () => {
-        customCursor.classList.add('clicked');
-    });
-
-    document.addEventListener('mouseup', () => {
-        customCursor.classList.remove('clicked');
-    });
 
     // Smooth scrolling for nav links
     navLinks.forEach(link => {
