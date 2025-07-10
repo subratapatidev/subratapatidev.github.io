@@ -1,5 +1,5 @@
 
-# 🌌 Subrata Patidev — Personal Portfolio
+# 🌌 Subrata Pati — Personal Portfolio
 
 Welcome to the source code of my personal portfolio website — crafted entirely with vanilla **HTML**, **CSS**, and **JavaScript**, and hosted via **GitHub Pages**.
 
