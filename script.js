@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Change logo and active link color based on section
                 let activeColor;
                 switch (id) {
-                    case 'hero':
+                    case 'about':
                         activeColor = '#ff6b81';
                         break;
                     case 'skills':
