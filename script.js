@@ -42,9 +42,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.isIntersecting) {
                 const id = entry.target.getAttribute('id');
                 
-                // Change background color
+                // Change particle color
                 const newColor = entry.target.dataset.color;
-                document.body.style.backgroundColor = newColor;
+                if (window.pJSDom && window.pJSDom[0] && window.pJSDom[0].pJS) {
+                    window.pJSDom[0].pJS.particles.color.value = newColor;
+                    window.pJSDom[0].pJS.particles.line_linked.color = newColor;
+                    window.pJSDom[0].pJS.fn.particlesRefresh();
+                }
+
 
                 // Highlight active nav link
                 // Highlight active nav link
