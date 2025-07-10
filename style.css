@@ -326,6 +326,22 @@ h2 {
     margin-bottom: 1rem;
 }
 
+.project-card .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.5rem;
+    border: 2px solid var(--color-blue);
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--color-blue);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.project-card .btn:hover {
+    background-color: var(--color-blue);
+    color: #fff;
+}
 .contact-box {
     background: rgba(0, 0, 0, 0.5);
     padding: 3rem;
