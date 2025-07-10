@@ -1,11 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const navLinks = document.querySelectorAll('nav ul li a');
+    const navLinks = document.querySelectorAll('.nav-links li a');
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-links');
     const sections = document.querySelectorAll('section');
     const animatedItems = document.querySelectorAll('.animated-item');
     const logoSpan = document.querySelector('.logo span');
 
 
-    // Smooth scrolling for nav links
+    // Hamburger menu functionality
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+
+    // Smooth scrolling and close mobile menu
     navLinks.forEach(link => {
         link.addEventListener('click', function (e) {
             if (this.getAttribute('href').startsWith('#')) {
@@ -13,6 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
+                // Close mobile menu after click
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    hamburger.classList.remove('active');
+                }
             }
         });
     });
@@ -34,7 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.body.style.backgroundColor = newColor;
 
                 // Highlight active nav link
-                navLinks.forEach(link => {
+                // Highlight active nav link
+                const desktopNavLinks = document.querySelectorAll('.nav-links:not(.active) li a');
+                desktopNavLinks.forEach(link => {
                     link.classList.remove('active');
                     if (link.getAttribute('href') === `#${id}`) {
                         link.classList.add('active');
