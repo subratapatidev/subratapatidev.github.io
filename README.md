@@ -1,6 +1,3 @@
-Perfect — here’s an updated and exciting `README.md` tailored to your portfolio, highlighting that it’s built **purely with HTML, CSS, and JavaScript** — no frameworks, no npm, no build tools.
-
----
 
 # 🌌 Subrata Patidev — Personal Portfolio
 
@@ -64,6 +61,7 @@ Then, simply open `index.html` in your browser.
 │   └── main.js
 ├── 📁 assets/
 │   └── images, icons, etc.
+├── 📄 LICENSE
 ```
 
 ---
@@ -78,8 +76,8 @@ Then, simply open `index.html` in your browser.
 
 ## 🛡️ License
 
-This project is open source under the [MIT License](LICENSE).
-Feel free to fork, clone, and remix — but give credit if you use parts of it!
+This project is licensed under the [MIT License](https://github.com/subratapatidev/subratapatidev.github.io/blob/main/LICENSE).
+Feel free to fork, clone, and remix — just give credit if you reuse any parts.
 
 ---
 
@@ -90,3 +88,7 @@ If you like the design or want to collaborate, feel free to reach out!
 
 > 🎯 *“Code is my canvas. Design is my language.”*
 > — Subrata Pati
+
+---
+
+
